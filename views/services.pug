@@ -1,0 +1,27 @@
+extends base
+
+block append head
+  link(rel='stylesheet', href='./css/ServicesStyle.css')
+  script(src='./js/myscripts.js')
+
+mixin servicesCard(service)
+  .col-xl-4.mb-3
+    .card(style='margin-left: 0px')
+      img.card-img-top(src=`${service.photo}`, alt='')
+      .card-body
+        h5.card-title #{ service.serviceTitle }
+        p.card-text
+          ul
+            li #{ service.serviceInfo.line1 }
+            li #{ service.serviceInfo.line2 }
+            li #{ service.serviceInfo.line3 }
+            li #{ service.serviceInfo.line4 }
+block content
+  section#header.jumbotron.text-center
+    h1.display-1 Our Services
+    p.lead Innovative Engineering Design and Consulting Services
+  section#gallery
+    .container-sm
+      .row
+        each service in services
+          +servicesCard(service)

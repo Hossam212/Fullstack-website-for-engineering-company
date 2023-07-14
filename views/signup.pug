@@ -1,0 +1,30 @@
+extends base
+
+block before-navbar
+  link(rel='stylesheet', href='./css/HomeStyle.css')
+  link(rel='stylesheet', href='./css/SignUpStyle.css')
+  script(src='https://www.google.com/recaptcha/api.js', async, defer)
+block content
+  #signup_form.box
+    h1.headtext Sign Up
+    p(style='text-align: center') Please enter the following information to sign up!
+    form(action='SignUpBack.php', method='post')
+      input#name(type='text', name='name', placeholder='Full Name')
+      br
+      input#email(type='email', name='email', placeholder='Email')
+      br
+      input#phone(type='tel', name='phone', placeholder='Phone number')
+      br
+      input#password(type='password', name='password', placeholder='Password')
+      br
+      input#confirmPassword(
+        type='password',
+        name='confirmPassword',
+        placeholder='Confirm Password'
+      )
+      br
+      .g-recaptcha(
+        style='margin-left: 25%; margin-bottom: 10px',
+        data-sitekey='6LePSEomAAAAAI7tRvIQhWlZ05p09CGM442FVhPF'
+      )
+      button#submit.submitbutton(type='submit') Submit

@@ -1,0 +1,47 @@
+#header {
+  background: url('../img/ServicesBg.jpeg') center center / cover no-repeat;
+  margin-top: 5%;
+}
+
+.row .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.row .card {
+  margin-top: 10%;
+  width: 600px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f0b96c;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbc9c9;
+}
+.card-title {
+  font-weight: bold;
+}
+
+#last {
+  margin-left: 33.333%;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 300px;
+}
+
+.col-xl-4 {
+  padding: 0px;
+}

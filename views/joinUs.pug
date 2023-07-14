@@ -1,0 +1,89 @@
+extends base
+block before-navbar
+  link(rel='stylesheet', href='./css/JoinUsStyle.css')
+block content
+  #container
+    h1 &bull; Apply now and join us &bull;
+    .underline
+    .icon_wrapper
+    form#apps_form
+      .firstname
+        label(for='name')
+        input#name_input(
+          type='text',
+          placeholder='First Name',
+          name='firstname',
+          required
+        )
+      .lastname
+        label(for='name')
+        input#lastname_input(
+          type='text',
+          placeholder='Last Name',
+          name='lastname',
+          required
+        )
+      .email
+        label(for='email')
+        input#email_input(
+          type='email',
+          placeholder='E-mail',
+          name='email',
+          required
+        )
+      .telephone
+        label(for='name')
+        input#telephone_input(
+          type='text',
+          placeholder='Phone Number',
+          name='phonenumber',
+          required
+        )
+      .subject
+        label(for='subject')
+        select#subject_input(
+          placeholder='Subject line',
+          name='experience',
+          required
+        )
+          option(disabled, hidden, selected) Years of Experience
+          option 0 - 5 years
+          option 5 - 10 years
+          option 10 - 15 years
+          option 15 - 30 years
+      .diploma
+        label(for='subject')
+        select#diplomasubject_input(placeholder='Subject line', name='diploma')
+          option(disabled, hidden, selected) Select your discipline/diploma
+          option B.S Architecture
+          option B.S Civil Engineering
+          option B.S Mechanical Engineering
+          option B.S Electrical Engineering
+      .cv
+        label(for='actual-btn') Upload your CV
+        br
+        input#actual-btn(type='file', hidden)
+        label.hamborgar(for='actual-btn') Choose File
+        span#file-chosen &nbsp; No file chosen
+      br
+      .message
+        label(for='message')
+        textarea#message_input(
+          name='message',
+          placeholder='Briefly describe the best two projects you have participated in and what was your role(s) in doing them?',
+          cols='30',
+          rows='5',
+          required
+        )
+      .submit
+        input#form_button(type='submit', value='Send Message')
+    // // End form
+  // // End #container
+  script.
+    const actualBtn = document.getElementById('actual-btn');
+
+    const fileChosen = document.getElementById('file-chosen');
+
+    actualBtn.addEventListener('change', function () {
+      fileChosen.textContent = this.files[0].name;
+    });

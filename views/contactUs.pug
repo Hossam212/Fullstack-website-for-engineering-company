@@ -1,0 +1,55 @@
+extends base
+block before-navbar
+  link(rel='stylesheet', href='./css/ContactUs.css') 
+block content
+  .background
+    .container(style='margin-left: 27%')
+      .screen
+        .screen-header
+          .screen-header-left
+            .screen-header-button.close
+            .screen-header-button.maximize
+            .screen-header-button.minimize
+          .screen-header-right
+            .screen-header-ellipsis
+            .screen-header-ellipsis
+            .screen-header-ellipsis
+        .screen-body
+          .screen-body-item.left
+            .app-title
+              span CONTACT
+              span US
+            .app-contact CONTACT INFO: +62 81 314 928 595
+          .screen-body-item
+            .app-form
+              form#contact_form
+                .app-form-group
+                  input.app-form-control(
+                    type='text',
+                    name='firstname',
+                    placeholder='NAME',
+                    required
+                  )
+                .app-form-group
+                  input.app-form-control(
+                    type='email',
+                    name='email',
+                    placeholder='EMAIL',
+                    required
+                  )
+                .app-form-group
+                  input.app-form-control(
+                    type='tel',
+                    name='phonenumber',
+                    placeholder='CONTACT NO',
+                    required
+                  )
+                .app-form-group.message
+                  textarea.app-form-control(
+                    name='message',
+                    placeholder='MESSAGE',
+                    required
+                  )
+                .app-form-group.buttons
+                  button.app-form-button(type='reset') CANCEL
+                  button.app-form-button(type='submit') SEND

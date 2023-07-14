@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    block head
+      meta(charset='UTF-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      link(rel='icon', href='./img/favicon.ico')
+      link(rel='stylesheet', href='./css/HomeStyle.css')
+      link(rel='stylesheet', href='./css/Footer.css')
+      block before-navbar
+      link(rel='stylesheet', href='./css/Navbar.css')
+      link(rel='stylesheet', href='./css/ionicons.min.css')
+      link(
+        rel='stylesheet',
+        href='https://fonts.googleapis.com/css?family=Comfortaa|Roboto|EB Garamond&effect=3d-float'
+      )
+      link(
+        rel='stylesheet',
+        href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css'
+      )
+      script(src='https://scripts.sirv.com/sirvjs/v3/sirv.js')
+      script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+
+      title NAMARIQ | #{ title }
+  body
+    // Nav Bar
+    #navbar
+      .menu
+        include _navbar
+    block content
+    include _footer
+    script(src='/js/bundle.js')

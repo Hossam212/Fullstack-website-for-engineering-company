@@ -1,0 +1,13 @@
+extends base
+block before-navbar
+  link(rel='stylesheet', href='./css/SignUpStyle.css')
+block content
+  #login_form.box
+    h1.headtext Log In
+    p(style='text-align: center') Please enter the following information to login
+    form
+      input#email(type='email', name='email', placeholder='Email')
+      br
+      input#password(type='password', name='password', placeholder='Password')
+      br
+      button#submit.submitbutton(type='submit') Log In

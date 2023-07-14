@@ -1,0 +1,36 @@
+extends base
+block append head
+  link(rel='stylesheet', href='./css/Projects.css')
+  script(src='./js/myscripts.js')
+
+mixin postCards(project)
+  article#commercial.postcard.light.blue
+    a.postcard_img_link
+      img.postcard_img(src=`${project.coverImage}`, alt='Image Title')
+    .postcard_text.t-dark
+      h1.postcard_title.blue
+        a #{ project.projectTitle }
+      .postcard_subtitle.small
+        time(datetime='2020-05-25 12:00:00')
+          i.fas.fa-calendar-alt.mr-2
+          | #{ project.projectDate }
+      .postcard_bar
+      .postcard_preview-txt
+        ul
+          if (project.projectInfo.line1)
+            li #{ project.projectInfo.line1 }
+          if (project.projectInfo.line2)
+            li #{ project.projectInfo.line2 }
+          if (project.projectInfo.line3)
+            li #{ project.projectInfo.line3 }
+      ul.postcard_tagbox
+        li.tagitem.play.blue
+          a.vm(data-toggle='modal', data-target=`${project.dataTarget}`)
+            i.far.fa-eye
+            | View More
+block content
+  // Project Cards
+  #begin.container.py-2
+    #pageHeaderTitle.h1.text-center.text-dark Our Projects
+    each project in projects
+      +postCards(project)

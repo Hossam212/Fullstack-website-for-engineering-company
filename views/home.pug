@@ -1,0 +1,86 @@
+extends base
+
+block append head
+  script(src='./js/myscripts.js')
+
+block content
+  .Sirv(
+    style='margin-bottom: -5px; margin-top: -8rem; width: 100%; max-height: 30rem; object-fit: cover; left: 0; right: 0; top: 0; z-index: -1',
+    data-options='video.autoplay:true; video.loop:true; video.background:true',
+    data-src='https://axicaten.sirv.com/Video10mb.mp4'
+  )
+  p.heading NAMARIQ
+  // News bar Div
+  #News.containernews
+    .ticker-wrap
+      .ticker
+        .ticker__item
+          | Namariq delivers successful project for the Ministry of Health.
+        .ticker__item
+          | Leading tech firm partners with Namariq Engineering Consultants to advance energy solutions.
+        .ticker__item
+          | ISO certification awarded to Namariq for its high-quality projects.
+        .ticker__item
+          | Namariq launches employee training program.
+  // About Div
+  .about
+    h3#ourv-text(
+      style='color: #717171; text-shadow: 0.1px 0.1px #717171; padding-left: 20px; text-align: left; font-size: 51px; font-family: "Times New Roman", Times, serif; font-weight: normal'
+    )
+      | The foundation of NAMARIQ came to implement ambitious ideas and desires through investigation.
+      br
+      .wrapper
+        span(style='font-family: "Times New Roman", Times, serif') We are
+        .words
+          span.myword Planners
+          span.myword NAMARIQ
+          span.myword Engineers
+          span.myword Consultants
+          span.myword Planners
+  // Services Div
+  #Service.bgclr
+    #services.container-full
+      img.image(src='./img/service_bg-1.jpg')
+      .info
+        h2 Services
+        | Learn more about some of the Studies we perform.
+        br
+        br
+        br
+        button.infobutton(onclick='location.href=\'Services.php\'') Our Services
+  // Projects Div
+  #Project.bgclr
+    #projects.container-full
+      img.image(src='./img/project_bg-2.jpg')
+      .info
+        h2 Projects
+        | Learn more about some of the projects we&apos;ve done.
+        br
+        br
+        br
+        button.infobutton(onclick='location.href=\'Projects.php\'') Our Projects
+  // Career Div
+  #Career.bgclr
+    #career.container-full
+      img.image(src='./img/career_bg-2.jpg')
+      .info
+        h2 Career
+        | Join and work with us for a future career.
+        br
+        br
+        br
+        button.infobutton(onclick='location.href=\'JoinUs.php\'') Join Us
+  // Contact Div
+  #Contact.bgclr
+    #contact.container-full
+      img.image(src='./img/location.jpg')
+      .info
+        h2 Contact Us
+        | Get in touch with us to know more in person.
+        br
+        br
+        br
+        button.infobutton(onclick='location.href=\'ContactUs.php\'') Contact Here
+  button#myBtn.back2top(onclick='back2top()')
+    i.fas.fa-arrow-up
+    | Back To Top

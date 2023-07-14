@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap');
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f0b96c;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbc9c9;
+}
+body {
+  margin: 0px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+.menu {
+  margin-left: 2.5%;
+  display: flex;
+}
+.userdiv {
+  margin-right: 2.5%;
+}
+.social-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: #555;
+}
+
+.user {
+  font-size: 14px;
+  border-radius: 25px;
+  padding: 5px 10px;
+  border: none;
+  margin-top: 8%;
+  box-shadow: 2px 2px 6px black;
+  margin-right: 10px;
+  font-family: Comfortaa, Arial;
+}
+.user:hover {
+  transform: scale(1.1);
+  box-shadow: 2px 3.6px 6px black;
+  cursor: pointer;
+}
+.container {
+  display: block;
+  margin: 0% 10%;
+}
+.whowetext {
+  opacity: 0;
+  transform: translate3d(-50px, 0, 0);
+  transition: 1s all ease-in-out;
+}
+.whowetextAR {
+  text-align: right;
+  opacity: 0;
+  transform: translate3d(-50px, 0, 0);
+  transition: 1s all ease-in-out;
+}
+.whowe {
+  padding-top: 56px;
+  padding-bottom: 57px;
+  width: 100%;
+  background-image: url('../img/Whoweback.png');
+}
+.whoweAR {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 56px;
+  padding-bottom: 57px;
+  width: 100%;
+  text-align: right;
+  background-image: url('../mediaAR/Whoweback.png');
+}
+.vision {
+  background-image: url('../img/persons.jpg');
+
+  background-size: cover;
+}
+.mission {
+  background-image: url('../img/goal.jpg');
+  padding-top: 150px;
+  padding-bottom: 200px;
+  background-size: cover;
+}
+#ourv-text {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+  transition: 0.7s all ease-in-out;
+  margin-top: -0.0001px;
+  padding-top: 230px;
+  margin-bottom: -2px;
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 200px;
+}
+
+.container {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.container .btn {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 50px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .btn a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 10px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  overflow: hidden;
+  color: #fff;
+  font-weight: 400px;
+  z-index: 1;
+  transition: 0.5s;
+  backdrop-filter: blur(15px);
+}
+.container .btn:hover a {
+  letter-spacing: 3px;
+}
+.container .btn a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+  transform: skewX(45deg) translate(0);
+  transition: 0.5s;
+  filter: blur(0px);
+}
+.container .btn:hover a::before {
+  transform: skewX(45deg) translate(200px);
+}
+.container .btn::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+.container .btn:hover::before /*lightup button*/ {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+}
+
+.container .btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  background: #f00;
+  border-radius: 10px;
+  transition: 0.5s;
+  transition-delay: 0.5;
+}
+.container .btn:hover::after /*lightup button*/ {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+}
+.container .btn:nth-child(1)::before, /*chnage 1*/
+.container .btn:nth-child(1)::after {
+  background: #2db2ff;
+  box-shadow: 0 0 5px #2db2ff, 0 0 15px #2db2ff, 0 0 30px #2db2ff,
+    0 0 60px #2db2ff;
+}
+.back2top {
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(83, 83, 83, 0.4);
+  transition: background-color 0.3s;
+}
+
+.back2top:hover {
+  cursor: pointer;
+  background-color: #f0ad4e;
+  box-shadow: #18151f 2px 2px;
+}

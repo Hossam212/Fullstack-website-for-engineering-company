@@ -1,0 +1,75 @@
+body {
+  background-image: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.box {
+  background-image: linear-gradient(gray, white);
+  box-sizing: border-box;
+  border-radius: 15px;
+  height: 70%;
+  width: 45%;
+  margin-left: 28.5%;
+  margin-top: 14%;
+  margin-bottom: 14%;
+
+  padding: 20px;
+}
+.headtext {
+  text-align: center;
+  font-size: 50px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f0b96c;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #cbc9c9;
+}
+input {
+  margin-left: 15%;
+  width: 70%;
+  height: 25px;
+  margin-bottom: 3%;
+  font-size: medium;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px black solid;
+}
+label {
+  font-size: 20px;
+}
+.stay {
+  margin-left: 0%;
+}
+.submitbutton {
+  background-color: gray;
+  border: 0px;
+  margin-left: 34%;
+  width: 30%;
+  height: 40px;
+}
+.submitbutton:hover {
+  background-color: black;
+  color: white;
+}
+::placeholder {
+  color: black;
+  opacity: 70%;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}

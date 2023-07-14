@@ -1,0 +1,131 @@
+extends base
+
+block before-navbar
+  link(rel='stylesheet', href='./css/HomeStyle2.css')
+
+block append head
+  link(
+    rel='stylesheet',
+    href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css'
+  )
+  link(
+    rel='stylesheet',
+    href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+  )
+  script(
+    src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js'
+  )
+  script(src='./js/homejs.js')
+
+mixin teamCard(member)
+  .col-lg-3.col-md-6.mb-4.mb-lg-0
+    .card.shadow-sm.border-0.rounded
+      .card-body.p-0
+        img.w-100.card-img-top(src=`${member.photo}`, alt='')
+        .p-4
+          h5.mb-0 #{ member.name }
+          p.small.text-muted #{ member.position }
+          ul.social.mb-0.list-inline.mt-3
+          li.list-inline-item.m-0
+            a.social-link(href=`${member.socialLinks.fb}`)
+              i.fa.fa-facebook-f
+          li.list-inline-item.m-0
+            a.social-link(href=`${member.socialLinks.twitter}`)
+              i.fa.fa-twitter
+          li.list-inline-item.m-0
+            a.social-link(href=`${member.socialLinks.linkedIn}`)
+              i.fa.fa-instagram
+          li.list-inline-item.m-0
+            a.social-link(href=`${member.socialLinks.instagram}`)
+              i.fa.fa-linkedin
+block content
+  // About Us Page
+  .aboutus
+    .whowe
+      p.whowetext(
+        style=`
+          display: inline-block;
+          margin-top: 6%;
+          margin-left: 4%;
+          font-size: 30px;
+          font-family: Comfortaa, Arial;
+          color: white;
+        `
+      )
+        | WHO WE ARE
+        .container(style='padding-left: 200px; margin-top: -5%')
+          .btn
+            a(href='https://online.fliphtml5.com/lsomg/vktd/') See our profile
+      h3.whowetext(
+        style=`
+            margin-left: 4%;
+            margin-right: 60%;
+            margin-top:31px;
+            text-shadow: 1.5px 1.5px 1.5px black;
+            text-align: justify;
+            text-align: left;
+            font-size: 18px;
+            font-family: Roboto, Arial;
+            font-weight: normal;
+            color: aliceblue;
+          `
+      )
+        | NAMARIQ was established as an architectural in Jeddah in 1992 with the
+        | name of AL-SAMMAN Engineering Consultants, primarily to provide
+        | consulting in architectural services to the private sectors, then it
+        | named NAMARIQ Engineering Consultants.
+    .vision
+      h3#ourv-text(
+        style=`
+            color: #ffffff;
+            text-shadow: 4px 4px 4px #000000;
+
+            text-align: center;
+            font-size: 46px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            backdrop-filter: blur(5px);
+          `
+      )
+        q(style='font-style: italic')
+          | We offer top-tier engineering consultancy, providing effective
+          | project management solutions that exceed expectations and earn
+          | clients&apos; trust
+    h3(
+      style=`
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 40px;
+        margin-left: 43%;
+        margin-top: 3%;
+        padding-bottom: 30px;
+        text-align: center;
+        display: flex;
+      `
+    )
+      | OUR OFFICES
+    .gmaps(
+      style=`
+        display: inline-block;
+        margin-left: 5%;
+        margin-right: 10%;
+        width: 90%;
+      `
+    )
+      iframe(
+        src='https://www.google.com/maps/d/embed?mid=1zW06N5LSpEeS_wu9UL4RGW6biw8&hl=en_US&ehbc=2E312F',
+        width='100%',
+        height='480'
+      )
+    // OUR TEAM SECTION
+    h2.font-weight-bold.mb-2(style='text-align: center; padding-top: 40px')
+      | Our Team
+    p.font-italic.text-muted.mb-4(
+      style='text-align: center; padding-bottom: 30px'
+    )
+      | Meet our talented and dedicated team driving our success.
+    .row.pb-5.mb-4
+      each member in teamMembers
+        +teamCard(member)
+  button#myBtn.back2top(onclick='back2top()')
+    i.fas.fa-arrow-up
+    | Back To Top
