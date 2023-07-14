@@ -1,4 +1,4 @@
-# Natours
+# Namariq fullstack website
 A fullstack website for a real Engineering Consultant company called NAMARIQ in saudi arabia, built using Node.js, express.js, mongoDB and more!
 
 
